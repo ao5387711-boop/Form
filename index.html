@@ -4,11 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Start Your Design</title>
+  
 
 <style>
 *{
   box-sizing:border-box;
 }
+<script>
+document.getElementById("designForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let name = document.querySelector('input[placeholder="Your Name"]').value;
+  let phone = document.querySelector('input[placeholder="Phone Number"]').value;
+  let phone2 = document.querySelector('input[placeholder="Additional Phone (Optional)"]').value;
+  let email = document.querySelector('input[placeholder="Your Email (Optional)"]').value;
+  let business = document.querySelector('input[placeholder="Business Field / Industry"]').value;
+  let width = document.querySelector('input[placeholder^="Width"]').value;
+  let height = document.querySelector('input[placeholder^="Height"]').value;
+  let budget = document.querySelector("select").value;
+  let message = document.querySelector("textarea").value;
+
+  let text = 
+`New Design Request:
+
+Name: ${name}
+Phone: ${phone}
+Additional Phone: ${phone2}
+Email: ${email}
+Business: ${business}
+Width: ${width}
+Height: ${height}
+Budget: ${budget}
+Details: ${message}`;
+
+  let whatsappURL = "https://wa.me/201234567890?text=" + encodeURIComponent(text);
+
+  window.open(whatsappURL, "_blank");
+});
+</script>
 
 body{
   margin:0;
@@ -151,7 +184,7 @@ textarea{
     <p>Quick form – clear details – fast response</p>
   </div>
 
-  <form>
+<form id="designForm">
 
     <input type="text" placeholder="Your Name" required>
     <input type="tel" placeholder="Phone Number" required>
@@ -199,7 +232,9 @@ textarea{
 
     <textarea placeholder="Your Message"></textarea>
 
-    <button class="submit-btn" type="submit">Start Your Design</button>
+<button type="submit" class="submit-btn">
+  Send via WhatsApp
+</button>
 
     <div class="note">
       Prefer to visit us and see materials & real execution?<br>
