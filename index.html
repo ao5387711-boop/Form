@@ -20,7 +20,7 @@ body{
 /* ===== Header ===== */
 .top-bar{
   width:100%;
-  height:60px;   /* صغرنا الشريط */
+  height:60px;
   background: linear-gradient(90deg,#000,#b00000);
   display:flex;
   justify-content:center;
@@ -35,24 +35,25 @@ body{
 }
 
 .logo-box img{
-  max-height:45px;   /* يصغر مع الشريط */
-  wid
+  max-height:45px;
+  width:auto;
+}
 
 /* ===== Form ===== */
 .form-wrapper{
+  width:92%;
   max-width:420px;
   margin:40px auto;
-  padding:18px;
 }
 
 .form-title{
   text-align:center;
-  margin-bottom:20px;
+  margin-bottom:25px;
 }
 
 .form-title h2{
   margin:0;
-  font-size:22px;
+  font-size:24px;
 }
 
 .form-title p{
@@ -63,24 +64,26 @@ body{
 form{
   display:flex;
   flex-direction:column;
-  gap:14px;
+  gap:15px;
 }
 
-input, textarea, select{
+input,
+textarea,
+select{
   width:100%;
-  padding:16px;
+  padding:15px;
   border:none;
   border-radius:12px;
   font-size:15px;
 }
 
 textarea{
-  resize:none;
   min-height:100px;
+  resize:none;
 }
 
 .submit-btn{
-  margin-top:18px;
+  margin-top:10px;
   background:#d00000;
   color:#fff;
   border:none;
@@ -99,7 +102,7 @@ textarea{
   font-size:13px;
   color:#aaa;
   text-align:center;
-  margin-top:14px;
+  margin-top:15px;
 }
 </style>
 </head>
@@ -126,7 +129,6 @@ textarea{
     <input type="tel" id="phone2" placeholder="Additional Phone (Optional)">
     <input type="email" id="email" placeholder="Your Email (Optional)">
     <input type="text" id="business" placeholder="Business Field / Industry">
-
     <input type="text" id="width" placeholder="Width (1m up to 150m)">
     <input type="text" id="height" placeholder="Height (1m up to 2.5m)">
 
@@ -141,7 +143,8 @@ textarea{
     <textarea id="details" placeholder="Your Message"></textarea>
 
     <button type="submit" class="submit-btn">
-Design now    </button>
+      Start Your Design
+    </button>
 
     <div class="note">
       Prefer to visit us and see materials & real execution?
